@@ -9,7 +9,7 @@
   overflow: auto;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: minmax(150px, 300px)repeat(3, 1fr);
+  grid-template-rows: minmax(150px, 300px) minmax(50px, 100px) repeat(2, 1fr);
   gap: 4px;
 
 }
@@ -53,6 +53,11 @@
   background-color: #FF7755;
   grid-column: 1 / 2;
   grid-row: 2 / 4;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr;
+  gap: 10px;
+  justify-content: start;
+  
 }
 
 .sidebar .photo {
@@ -71,14 +76,23 @@
   color: black;
   font-size: 16px;
   font-weight: normal;
+  
+ 
 }
 
 .nav {
   background-color: #FF7755;
   grid-column: 2 / 3;
+  display: grid;
+  align-items: center;
 }
 
 .nav ul {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  list-style: none;
 }
 
 .nav ul li {
@@ -89,6 +103,8 @@
 .article {
   background-color: #bccbde;
   grid-column: 2 / 3;
+  display: grid;
+  
 }
 
 .article p {
